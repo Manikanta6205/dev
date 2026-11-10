@@ -1,0 +1,60 @@
+3. Monitoring and Visualization using Prometheus and Grafana
+Aim: Monitor a Python application using Prometheus and visualize metrics using Grafana.
+
+Prometheus
+Collects and stores application metrics.
+
+Grafana
+Displays metrics using dashboards and graphs.
+
+
+Step 1: Run all containers
+docker compose up -d --build
+
+
+Step 8: Open applications
+Python Application
+
+http://localhost:5000
+
+Prometheus
+
+http://localhost:9090
+
+Grafana
+
+http://localhost:3000
+
+Next step:
+up
+requests_total
+> execute query
+
+Step 9: Configure Grafana
+1. Open http://localhost:3000.
+2. Username: admin
+3. Password: admin (change it when prompted).
+4. Go to Connections → Data Sources.
+5. Select Prometheus.
+6. Enter URL:
+http://prometheus:9090
+
+
+7. Click Save & Test.
+8. Open Explore and select Prometheus.
+9. Enter this query:
+requests_total
+
+
+10. Click Run query.
+
+Visit your Python application several times to generate metrics.
+
+Step 10: Stop containers
+docker compose down
+
+
+Expected result
+- Prometheus collects application request metrics.
+- Grafana displays the metrics in graphs.
+- You can monitor application activity.

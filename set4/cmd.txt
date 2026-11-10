@@ -1,0 +1,43 @@
+//Docker commands:
+
+docker build -t myimage .
+docker run -d --name mycont -p 8080:5000 myimage
+docker ps 
+docker logs mycont
+docker inspect mycont
+docker stats
+
+//k8s:
+
+kubectl apply -f deployment.yaml
+
+kubectl apply -f service.yaml
+
+kubectl get pods
+
+kubectl get services
+
+//k8s scalability:
+kubectl scale deployment mydeployment --replicas=5
+
+
+// Perform Rolling Update
+kubectl set image deployment/nginx-deployment nginx=nginx:latest
+
+Step 6: Check update status
+kubectl rollout status deployment/nginx-deployment
+
+Step 7: Check rollout history
+kubectl rollout history deployment/nginx-deployment
+
+Step 8: Rollback if required
+kubectl rollout undo deployment/nginx-deployment
+
+Step 9: Delete deployment
+kubectl delete deployment nginx-deployment
+
+Expected result
+- Initially: 2 pods.
+- After scaling: 5 pods.
+- Rolling update: New container image deployed gradually.
+- Rollback: Previous version restored.

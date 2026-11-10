@@ -1,0 +1,18 @@
+//Docker commands:
+
+docker build -t myimage .
+docker run -d --name mycont -p 8080:5000 myimage
+docker ps 
+docker logs mycont
+docker inspect mycont
+docker stats
+
+//k8s:
+
+kubectl apply -f deployment.yaml
+
+kubectl apply -f service.yaml
+
+kubectl get pods
+
+kubectl get services

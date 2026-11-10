@@ -1,0 +1,57 @@
+install Cmd 
+
+winget install Hashicorp.Terraform
+
+=================
+
+
+1. Initialize Terraform
+terraform init
+
+
+2. Validate Configuration
+terraform validate
+
+
+3. Create Execution Plan
+terraform plan
+
+
+4. Apply Configuration
+terraform apply
+
+
+5. Inspect Terraform State
+terraform show
+
+Check output
+http://localhost:8081
+
+6. Destroy Resources
+terraform destroy
+
+
+
+#2. Terraform State Management
+
+View State
+terraform state list
+terraform show
+
+
+View State File
+type terraform.tfstate
+
+
+View Specific Resource
+terraform state show docker_container.nginx
+
+
+Remove Resource from State
+terraform state rm docker_container.nginx
+
+Other useful commands
+terraform fmt
+terraform validate
+terraform plan
+terraform refresh
