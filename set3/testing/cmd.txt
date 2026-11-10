@@ -1,0 +1,5 @@
+Step 1: Install Pytest
+pip install pytest
+
+Step 4: Run tests
+pytest -v

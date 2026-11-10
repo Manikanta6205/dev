@@ -1,0 +1,62 @@
+//To install flash:
+
+pip install flask
+pip install -r requirements.txt
+python app.py
+
+//Docker commands:
+
+docker build -t myimage .
+docker run -d --name mycont -p 8080:5000 myimage
+docker ps 
+docker logs mycont
+docker inspect mycont
+docker stats
+
+//k8s:
+
+kubectl apply -f deployment.yaml
+
+kubectl apply -f service.yaml
+
+kubectl get pods
+
+kubectl get services
+
+//git
+
+# Check Git version
+git --version
+
+#Remove the predefined credentials
+Control panel -> User account -> windows manage credentials -> remove github
+
+# Configure username
+git config --global user.name "msd"
+
+# Configure email
+git config --global user.email "msd@gmail.com"
+
+# Create repository
+git init
+
+# Add file
+git add .
+
+# Commit changes
+git commit -m "Initial commit"
+
+# Check status
+git status
+
+# Create main branch
+git branch -M main
+
+# Add remote repository
+git remote add origin https://github.com/username/demo.git
+
+# Push to GitHub
+git push -u origin main
+
+# View commit history
+git log
