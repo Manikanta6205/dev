@@ -27,7 +27,7 @@ http://localhost:3000
 
 Next step:
 up
-requests_total
+app_requests_total
 > execute query
 
 Step 9: Configure Grafana
@@ -43,7 +43,7 @@ http://prometheus:9090
 7. Click Save & Test.
 8. Open Explore and select Prometheus.
 9. Enter this query:
-requests_total
+app_requests_total
 
 
 10. Click Run query.
